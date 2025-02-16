@@ -24,6 +24,7 @@
 
 <!-- Heroicons -->
 <script src="https://cdn.jsdelivr.net/npm/heroicons@1.0.5/outline/index.js"></script>
+<script src="/js/index.js"></script>
 
 </body>
             
