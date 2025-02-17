@@ -1,4 +1,4 @@
-<div class="bg-cold p-4 rounded-lg shadow-md w-full h-1/6">
+<div class="bg-cold p-4 rounded-lg shadow-md w-[880px] h-1/6">
 
     <h1 class="text-3xl text-white text-center pt-4">Controle financeiro</h1>
     <div class=" flex justify-center items-center space-x-6 mt-3 ">
@@ -82,7 +82,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($financas as $financa)
+        @foreach($financasLimit as $financa)
         <tr>
             <td class="border border-gray-300 px-4 py-2">{{ $financa->description }}</td>
             <td class="border border-gray-300 px-4 py-2">{{ number_format($financa->valor, 2, ',', '.') }} €</td>
@@ -99,10 +99,10 @@
                 @method('DELETE')
                     <button><i class="fa-solid fa-trash text-red-700"></i></button>
                 </form>
-           
-                <form action="" method="post">
+                
+                <a href="/update/{{$financa->id}}" >
                 <i class="fa-solid fa-pen-to-square text-green-700"></i>
-                </form>
+                  </a>
                 </td>
                
         </tr>
@@ -113,5 +113,13 @@
 
  </div>
 
+
+ <div class="mt-5 flex justify-center">
+    <a href="" class="btn bg-purple text-white p-3 rounded-lg hover:bg-cold">Mostrar todos</a>
+</div>
+
+
+
+ 
     </div>
 

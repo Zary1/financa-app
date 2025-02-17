@@ -63,30 +63,7 @@ class Users extends Controller
 
    
 }
-public function createGoal(Request $request){
-    $userId = Auth::id();
-    $request->validate([
-        'goal_name' => ['required', 'string'],
-        'goal_amount' => ['required', 'numeric'],
-        'amount_save' => ['required', 'numeric'],
-        'goal_description' => ['required', 'string'],
-        'goal_deadline' => ['required', 'date'],
-        
-    ]);
-    $goal= new Goal();
-    $goal->goal_name=$request->goal_name;
-    $goal->goal_amount=$request->goal_amount;
-    $goal->amount_save=$request->amount_save; 
-    $goal->goal_description=$request->goal_description; 
-    $goal->goal_deadline=$request->goal_deadline; 
-    $goal->status='pendente';
-    $goal->user_id=$userId;
 
-    $goal->save();
-
-    return redirect('/goals');
-
-}
 
 public function alterarSenha(Request $request)
 {

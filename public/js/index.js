@@ -24,3 +24,14 @@ document.getElementById("alterar_senha").addEventListener("click", () => {
 document.getElementById("close_senha").addEventListener("click",()=>{
     document.getElementById("senha").classList.add("hidden"); 
 })
+
+// show goals
+
+document.getElementById("all_goals").addEventListener("click", () => {
+   
+    document.getElementById("showGoals").classList.remove("hidden"); 
+});
+document.getElementById("close_show").addEventListener("click",()=>{
+    document.getElementById("showGoals").classList.add("hidden"); 
+})
+
