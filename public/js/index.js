@@ -34,4 +34,10 @@ document.getElementById("all_goals").addEventListener("click", () => {
 document.getElementById("close_show").addEventListener("click",()=>{
     document.getElementById("showGoals").classList.add("hidden"); 
 })
+// menu
+const menuToggle = document.getElementById('menuToggle');
+const menu = document.getElementById('menu');
 
+menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+});

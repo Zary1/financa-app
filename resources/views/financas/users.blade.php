@@ -1,46 +1,75 @@
-<div class="bg-purple w-[400px] rounded-lg h-full">
-      @if(Auth::guard('web')->check())
+<div class="bg-purple w-[400px] 
+rounded-lg h-full xs:w-full lg:flex-col xm:flex-row">
 
+
+<div class="flex-col xs:mx-[60px] lg:mx-[10px]">
+@if(Auth::guard('web')->check()) 
        <img src="{{ asset('img/profile_images/'.Auth::guard('web')->user()->profile_image) }}" alt="" 
-       class="w-1/3 mx-auto rounded-full shadow-md mt-6">
-
-
-    <p class="text-white text-xl text-center pb-9">{{Auth::guard('web')->user()->name}}</p>
-     
+       class="w-[140px] mx-auto rounded-full shadow-md mt-4">
+    <p class="text-white text-md text-center pb-0 pt-2 ">{{Auth::guard('web')->user()->name}}</p>
+  
      @endif
-     <div class="space-y-9 pl-9">
-
-     <p class="text-white text-xl cursor-pointer hover:text-cold">
-          <i class="fas fa-home w-6 h-6 inline-block mr-2"></i>
-          <a href="/">Home</a> </p>
-        <p class="text-white text-xl cursor-pointer hover:text-cold">
-          <i class="fas fa-wallet w-6 h-6 inline-block mr-2"></i> Saldo atual:
-          <span class="font-bold">{{ $totalGeral }} €</span></p>
+     </div>
+     <div class="relative">
 
 
-       
-        </p>
-        <p class="text-white text-xl cursor-pointer hover:text-cold">
-          <i class="fas fa-chart-line w-6 h-6 inline-block mr-2"></i>
-          <a href="allTrancacoes">Todas trancações</a></p>
-        <p class="text-white  text-xl cursor-pointer hover:text-cold"  id="info_pessoais">
-          <i class="fas fa-user w-6 h-6 inline-block mr-2"> </i> Informações pessoais</p>
-        <p class="text-white  text-xl cursor-pointer hover:text-cold"   id="create_goals">
-          <i class="fas fa-bullseye w-6 h-6 inline-block mr-2"></i> Criar meta de economia</p>
-        <p class="text-white  text-xl cursor-pointer hover:text-cold" id="all_goals">
-          <i class="fas fa-file-alt w-6 h-6 inline-block mr-2"></i>Todas as metas</p>
-        <p class="text-white  text-xl cursor-pointer hover:text-cold"   id="alterar_senha">
-          <i class="fas fa-cogs w-6 h-6 inline-block mr-2"></i> Alterar senha</p> 
-          <form action="/logout" method="post">
-            @csrf
-        <p class="text-white  text-xl cursor-pointer hover:text-cold"    
-        onclick="event.preventDefault(); this.closest('form').submit()">
-          <i class="fas fa-sign-out-alt w-6 h-6 inline-block mr-2" >
-    
-          </i> Logout</p> 
-          </form>
-      </div>
-    
+  <button id="menuToggle" class="sm:hidden p-4 text-white">
+    <i class="fas fa-bars text-2xl"></i>
+  </button>
+
+  
+  <div id="menu" class="hidden sm:block space-y-9 pl-9 bg-gray-800 sm:bg-transparent sm:relative lg:w-[300px]
+  absolute top-8 left-0 w-full sm:w-auto">
+
+    <p class="text-white text-xl cursor-pointer hover:text-cold">
+      <i class="fas fa-home w-6 h-6 inline-block mr-2"></i>
+      <a href="/">Home</a>
+    </p>
+
+    <p class="text-white text-xl cursor-pointer hover:text-cold">
+      <i class="fas fa-wallet w-6 h-6 inline-block mr-2"></i>
+      Saldo atual: <span class="font-bold">{{ $totalGeral }} €</span>
+    </p>
+
+    <p class="text-white text-xl cursor-pointer hover:text-cold">
+      <i class="fas fa-chart-line w-6 h-6 inline-block mr-2"></i>
+      <a href="allTrancacoes">Todas transações</a>
+    </p>
+
+    <p class="text-white text-xl cursor-pointer hover:text-cold" id="info_pessoais">
+      <i class="fas fa-user w-6 h-6 inline-block mr-2"></i>
+      Informações pessoais
+    </p>
+
+    <p class="text-white text-xl cursor-pointer hover:text-cold" id="create_goals">
+      <i class="fas fa-bullseye w-6 h-6 inline-block mr-2"></i>
+      Criar meta de economia
+    </p>
+
+    <p class="text-white text-xl cursor-pointer hover:text-cold" id="all_goals">
+      <i class="fas fa-file-alt w-6 h-6 inline-block mr-2"></i>
+      Todas as metas
+    </p>
+
+    <p class="text-white text-xl cursor-pointer hover:text-cold" id="alterar_senha">
+      <i class="fas fa-cogs w-6 h-6 inline-block mr-2"></i>
+      Alterar senha
+    </p>
+
+    <form action="/logout" method="post">
+      @csrf
+      <p class="text-white text-xl cursor-pointer hover:text-cold" onclick="event.preventDefault(); this.closest('form').submit()">
+        <i class="fas fa-sign-out-alt w-6 h-6 inline-block mr-2"></i>
+        Logout
+      </p>
+    </form>
+
+  </div>
+
+</div>
+
+
+  
     </div>
 
 

@@ -1,13 +1,13 @@
 
 
-<div class="flex flex-col  w-[600px] ">
-    <div class="mt-[100px] h-[300px] w-[400px] bg-white rounded-lg shadow-lg ml-5">
+<div class="flex flex-col  lg:w-[800px] xs:w-[450px] ">
+    <div class="mt-[100px] h-[300px] w-[360px] bg-white rounded-lg shadow-lg ml-5">
         <h3 class="text-xl font-semibold text-center mb-4 pt-2">Evolução do Saldo</h3>
         <canvas id="balanceChart"></canvas>
     </div>
 
     <!-- Seção de Metas Concluídas -->
-    <div class="mt-[40px] bg-white rounded-lg shadow-lg p-4 w-[400px] ml-5">
+    <div class="mt-[40px] bg-white rounded-lg shadow-lg p-4 w-[360px] ml-5">
         <h3 class="text-xl font-semibold text-center mb-4 pt-2">Metas Concluídas</h3>
         <div class="space-y-4">
         @php
