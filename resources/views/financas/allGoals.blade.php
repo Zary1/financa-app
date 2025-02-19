@@ -2,25 +2,30 @@
 @section('title','Finança')
 @section('content')
 
-<section class="flex w-full space-x-4 p-1 lg:h-screen xs:h-full xs:flex-col lg:flex-row">
+<section class="flex w-full space-x-4 p-1 h-screen xs:flex-col lg:flex-row">
 
 @include('financas.users')
 
  
   
+@extends('layout.main')
+@section('title','Finança')
+@section('content')
 
-<!-- Modal para exibir os Goals -->
+<section class="flex w-full space-x-4 p-1 lg:h-screen xs:h-full xs:flex-col lg:flex-row">
+
+@include('financas.users')
+
+ 
 
   <div class="bg-white text-black p-6 rounded-lg shadow-lg lg:w-[3250px] xs:w-[450px] lg:h-full xs:h-full">
    
-
-    <!-- Título -->
     <h2 class="text-2xl font-bold mb-6 text-center xs:text-left">Meus Objetivos</h2>
 
     <!-- Grid de Goals -->
     <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6  ">
       @foreach($goals as $goal)
-      <div class="bg-purple-100 p-4 rounded-lg shadow-md relative">
+      <div class="bg-purple-100 p-4 rounded-lg shadow-md">
         <h3 class="text-lg font-semibold mb-2 flex items-center gap-2">
           <i class="fa-solid fa-bullseye text-purple-500"></i> {{ $goal->goal_name }}
         </h3>
@@ -79,6 +84,11 @@
 
 
 
+
 </section>
+
+<script src="/js/index.js"></script>
+@endsection
+
 
 @endsection

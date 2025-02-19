@@ -8,13 +8,14 @@ use App\Http\Controllers\Goals;
 
 
 Route::get('/',[Users::class,'index'])->middleware('auth')->name('/welcome');
-Route::post('/register',[Users::class,'store']); 
+Route::post('/register',[Users::class,'store'])->name('register'); 
+Route::get('/register',[Users::class,'show'])->name('register'); 
 Route::post('/logout',[Users::class,'logout'])->name('logout'); 
 Route::post('/alterar-senha', [Users::class, 'alterarSenha'])->name('alterar.senha');
 // golas
 Route::post('/create-goal', [Goals::class, 'createGoal']);
 Route::get('/goals/{id}', [Goals::class, 'editGoals']); 
-Route::get('/allGoals', [Goals::class, 'allGoals']); 
+Route::get('/allGoals', [Goals::class, 'showGoal']); 
 Route::post('/goals/{id}', [Goals::class, 'updateGoals']); 
 Route::delete('/deleteallGoals', [Goals::class, 'destroy']); 
 // financas

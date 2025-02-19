@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Auth;
 
 class Users extends Controller
 {
+    public function show(){
+        return view('auth.register');
+    }
+
     public function index(){
         $users=User::all();
         

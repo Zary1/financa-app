@@ -49,13 +49,20 @@ document.getElementById("close_show").addEventListener("click", () => {
     document.getElementById("showGoals").classList.add("hidden");
 });
 
-// Menu
+
+
+  });
+  
+
+  document.addEventListener("DOMContentLoaded", () => {
 const menuToggle = document.getElementById('menuToggle');
 const menu = document.getElementById('menu');
 
 menuToggle.addEventListener('click', () => {
     menu.classList.toggle('hidden');
-});
-
-  });
   
+});
+console.log(document.getElementById('menuToggle'));
+console.log(document.getElementById('menu'));
+
+});

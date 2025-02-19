@@ -1,3 +1,5 @@
+<body>
+
 <div class="bg-purple w-[400px] 
 rounded-lg h-full xs:w-full lg:flex-col xm:flex-row">
 
@@ -18,7 +20,7 @@ rounded-lg h-full xs:w-full lg:flex-col xm:flex-row">
   </button>
 
   
-  <div id="menu" class="hidden sm:block space-y-9 pl-9 bg-gray-800 sm:bg-transparent sm:relative lg:w-[300px]
+  <div id="menu" class="hidden sm:block space-y-9 pl-9 bg-gray-500 sm:bg-transparent sm:relative lg:w-[300px]
   absolute top-8 left-0 w-full sm:w-auto">
 
     <p class="text-white text-xl cursor-pointer hover:text-cold">
@@ -59,7 +61,7 @@ rounded-lg h-full xs:w-full lg:flex-col xm:flex-row">
     <i class="fas fa-cogs w-6 h-6 inline-block mr-2"></i>
     Alterar senha
   </button>
-  <p class="text-white text-xl cursor-pointer hover:text-cold" id="all_goals">
+  <p class="text-white text-xl cursor-pointer hover:text-cold" id="register">
     <a href="/register">
     <i class="fas fa-file-signature w-6 h-6 inline-block mr-2"></i>
       Registrar
@@ -87,7 +89,7 @@ rounded-lg h-full xs:w-full lg:flex-col xm:flex-row">
 <div id="overlay" class="fixed lg:left-1/4 inset-x-0  xs:left-0
 bg-black bg-opacity-30 hidden flex items-center justify-center h-screen">
     <!-- Caixa de informações pessoais -->
-    <div id="show_div_info" class="bg-white text-black pl-6 pt-4 rounded-lg shadow-lg   xs:w-[450px]
+    <div id="show_div_info" class="bg-white text-black pl-6 pt-4 rounded-lg shadow-lg  z-index: 9999  xs:w-[450px]
     lg:w-[500px] h-[300px]">
     <div class="flex cursor-pointer  items-center justify-center w-[50px] h-[30px] lg:ml-[400px] xs:ml-[360px]
      bg-purple rounded-full" id="close_info">
@@ -127,7 +129,7 @@ bg-black bg-opacity-30 hidden flex items-center justify-center h-screen">
      required class="w-full p-2 rounded-lg text-black border-cold " >
     <input type="number" id="goal_amount" name="goal_amount" placeholder="Valor Alvo (€):"
     required step="0.01" class="w-full p-2 rounded-lg text-black  border-cold ">
-    <input type="number" id="goal_amount" name="amount_save" placeholder="Valor disponível (€):"
+    <input type="number" id="goal_save" name="amount_save" placeholder="Valor disponível (€):"
     required step="0.01" class="w-full p-2 rounded-lg text-black  border-cold ">
     <input type="date" id="goal_deadline" name="goal_deadline" placeholder="Data Limite"
      required class="w-full p-2 rounded-lg text-black  border-cold ">
@@ -175,3 +177,5 @@ bg-black bg-opacity-30 hidden flex items-center justify-center h-screen">
     </div>
 </div>
 
+<script src="/js/index.js"></script>
+</body>

@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 
 class Goals extends Controller
 {
-    public function allGoals(){
+    public function showGoal(){
         $goals=Goal::all();
         return view('financas.allGoals',['goals'=>$goals]);
     }
