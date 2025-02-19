@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Auth;
 
 class Goals extends Controller
 {
+    public function allGoals(){
+        $goals=Goal::all();
+        return view('financas.allGoals',['goals'=>$goals]);
+    }
     public function createGoal(Request $request){
         $userId = Auth::id();
         $request->validate([

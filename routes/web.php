@@ -14,6 +14,7 @@ Route::post('/alterar-senha', [Users::class, 'alterarSenha'])->name('alterar.sen
 // golas
 Route::post('/create-goal', [Goals::class, 'createGoal']);
 Route::get('/goals/{id}', [Goals::class, 'editGoals']); 
+Route::get('/allGoals', [Goals::class, 'allGoals']); 
 Route::post('/goals/{id}', [Goals::class, 'updateGoals']); 
 Route::delete('/deleteallGoals', [Goals::class, 'destroy']); 
 // financas

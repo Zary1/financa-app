@@ -2,22 +2,24 @@
 @section('title','Finança')
 @section('content')
 
+<section class="flex w-full space-x-4 p-1 h-screen xs:flex-col lg:flex-row">
 
-<section class="flex w-full space-x-4 p-1 h-screen xs:flex-col lg:flex-row overflow-x-hidden">
+@include('financas.users')
 
-<div class="flex-1">
-    @include('financas.users')
+ 
   
-</div>
-    <div class="h-1/6 bg-cold p-4 rounded-lg w-[800px]
+
+<div class="lg:w-[3250px] xs:w-[450px] ">
+<div class="h-1/6 bg-cold p-4 rounded-lg 
  xs:mt-[-10px] lg:mt-[10px]
 shadow-md ">
+<h1 class="lg:text-3xl text-white text-center pt-4 xs:text-2xl ">Todas finanças</h1>
+</div>
+    
+  
 
-<h1 class="text-3xl text-white text-center pt-4">Todas as trancações</h1>
-
-
-
- <!-- Exibição de Controle -->
+    
+    <!-- Exibição de Controle -->
     <div class="mt-5 bg-white rounded-lg shadow-sm">
         <table class="table-auto w-full border-collapse border border-gray-300">
             <thead class="bg-gray-100">
@@ -57,20 +59,10 @@ shadow-md ">
         </table>
     </div>
 
+   
 </div>
 
-
-
-
-
-
-
-
-
-<div class="w-[400px]">
-@include('financas.relatorio')
-</div>
- 
+    @include('financas.relatorio')
 
 
 

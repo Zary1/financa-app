@@ -2,8 +2,7 @@
 @extends('layout.main')
 @section('title','Finança')
 @section('content')
-
-<section class="flex w-full space-x-4 p-1 h-screen j">
+<section class="flex w-full space-x-4 p-1 lg:h-screen xs:h-full xs:flex-col lg:flex-row">
 
     @include('financas.users')
   
@@ -12,8 +11,7 @@
     <!-- Grid de Goals -->
   
 
-<div class="bg-white text-black mt-6 p-6 rounded-lg shadow-lg w-[900px] h-[560px] 
- ">
+<div class="bg-white text-black mt-6 p-6 rounded-lg shadow-lg lg:w-[2900px] xs:w-[400px]  h-[560px] ">
 
 
 <form action="/goals/{{$goal->id}}" method="POST" class="space-y-4  ">
@@ -25,7 +23,7 @@
         </div>
     @csrf
     <select name="status" id="status" 
-      class="w-[150px] ml-[690px] p-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none">
+      class="w-[150px] lg:ml-[900px] xs:ml-[200px]  p-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none">
       <option value="concluido" {{ $goal->status == 'concluido' ? 'selected' : '' }}>Concluído</option>
       <option value="pendente" {{ $goal->status == 'pendente' ? 'selected' : '' }}>Pendente</option>
   </select>
